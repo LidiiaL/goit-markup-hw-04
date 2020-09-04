@@ -225,10 +225,35 @@
   counter-reset: list;
 }
 
+
 .advantages-item {
  width: 270px;
  padding-left: 0px;
 }
+
+.advantages-item::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  background-color: var(--primary-button-bcg-color);
+  /*background-image: url(../images/antenna-copy.svg);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+.advantages-item:nth-child(1)::before {
+  background-image: url(../images/antenna-copy.svg);
+}
+.advantages-item:nth-child(2)::before {
+  background-image: url(../images/clock-copy.svg);
+}
+.advantages-item:nth-child(3)::before {
+  background-image: url(../images/diagram-copy.svg);
+}
+.advantages-item:nth-child(4)::before {
+  background-image: url(../images/astronaut-copy.svg);
+}
+
 
 .list.advantages-list {
   display: flex;
@@ -239,24 +264,46 @@
   margin-right: 30px;
 }
 
+
 .advantages-paragraph {
   margin: 0px;
 }
 
-.advantages-list .advantages-item::before {
+/*.background-box {
   counter-increment: list;
   display: block;
-  content: "" counter(list);
+  /*content: "" counter(list);*/
   width: 270px;
   height: 120px;
   background: var(--primary-button-bcg-color);
-  background-image: url(../images/antenna\ —\ копия.svg)/*, url(../images/clock\ —\ копия.svg) , url(../images/diagram\ —\ копия.svg) , url(../images/astronaut\ —\ копия.svg)*/;
+  border-radius: 4px;
+  /*background-image: url(../images/antenna-copy.svg); */ /*, url(../images/clock\ —\ копия.svg) , url(../images/diagram\ —\ копия.svg) , url(../images/astronaut\ —\ копия.svg)*/
+}
+/*.advantages-item:nth-child(1) .background-box {
+  background-image: url(../images/antenna-copy.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px;
-  border-radius: 4px;
 }
-
+.advantages-item:nth-child(2) .background-box {
+  background-image: url(../images/clock-copy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+.advantages-item:nth-child(3) .background-box {
+  background-image: url(../images/diagram-copy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+.advantages-item:nth-child(4) .background-box {
+  background-image: url(../images/astronaut-copy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+*/
 
 
 /*задаёт стили для секции чем мы занимаемся*/
@@ -368,15 +415,15 @@
 } 
 
 /*задаёт стили для футеров*/
+.address-box,
+.links-box {
+  width: 270px;
+}
+
 .footer {
   background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-
-.content-box { 
-  width: 370px;
 }
 
 .footer-logo {
@@ -396,6 +443,70 @@
 .phone-link {
   line-height: 4;
 }
+.actions-footer {
+font-weight: 700;
+color: var(--main-white-color);
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.list.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  outline: 1px solid salmon;
+}
+
+.social-icon-link {
+  display: block;
+  content: "";
+  width: 44px;
+  height: 44px;
+  outline: 1px solid violet;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+  /*background-image: url(../images/symbol-defs.svg⌗instagram);
+  background-repeat: no-repeat;
+  background-position: center;*/
+
+
+  /*.social-icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--white);
+    border-radius: 50%;
+  }*/
+
+/*.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: red;*/
+
+
+  /*display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;*/
+}
+
+display: block;
+  content: " ";
+  height: 120px;
+  background-color: var(--primary-button-bcg-color);
+  /*background-image: url(../images/antenna-copy.svg);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
 
 /*ПОРТФОЛИО*/
 /*задаёт стили для кнопок страницы портфолио*/ 
